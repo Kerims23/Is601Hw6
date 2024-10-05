@@ -19,7 +19,8 @@ class Calculation:
     
     def perform(self) -> Decimal:
         """Performs the operation."""
-        return self.operation(self.a, self.b)
+        command = self.operation(self.a, self.b)  # Create the command instance
+        return command.execute() 
 
     @staticmethod
     def create(a: Decimal, b: Decimal, operation):
