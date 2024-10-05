@@ -1,5 +1,6 @@
 '''testing commands'''
 from decimal import Decimal
+import pytest
 from calculator.plugins.addition.add_plugin import AddCommand
 from calculator.plugins.division.division_plugin import DivideCommand
 
@@ -16,4 +17,6 @@ def test_divide_command():
 def test_divide_by_zero():
     '''division error command'''
     command = DivideCommand(Decimal('10'), Decimal('0'))
-    assert command.execute() == "Cannot divide by zero!"
+    with pytest.raises(ZeroDivisionError, match="An error occurred: Cannot divide by zero"):
+        command.execute()
+        
