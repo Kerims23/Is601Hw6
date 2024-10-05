@@ -52,11 +52,11 @@ def test_calculation_repr():
 
 def test_divide_by_zero():
     """
-    Test division by zero to ensure it raises a ValueError.
+    Test division by zero to ensure it raises a ZeroDivisionError.
     This test checks that attempting to perform a division operation with a zero divisor
-    correctly raises a ValueError, as dividing by zero is mathematically undefined and should be handled as an error.
+    correctly raises a ZeroDivisionError, as dividing by zero is mathematically undefined and should be handled as an error.
     """
-    calc = Calculation(Decimal('10'), Decimal('0'), DivideCommand)#Create a Calculation instance with a zero divisor.
-    with pytest.raises(ValueError, match="Cannot divide by zero!"):#Expect ValueError to be raised.
-        calc.perform()  # Attempt to perform the calculation, which should trigger the ValueError.
+    calc = Calculation(Decimal('10'), Decimal('0'), DivideCommand)  # Create a Calculation instance with a zero divisor.
+    with pytest.raises(ZeroDivisionError, match="An error occurred: Cannot divide by zero"):  # Expect ZeroDivisionError to be raised.
+        calc.perform()  # Attempt to perform the calculation, which should trigger the ZeroDivisionError.
         
