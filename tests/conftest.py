@@ -2,7 +2,10 @@
 # conftest.py
 from decimal import Decimal
 from faker import Faker
-from calculator.operations import add, subtract, multiply, divide
+from calculator.plugins.addition.add_plugin import AddCommand
+from calculator.plugins.subtraction.subtraction_plugin import SubtractCommand
+from calculator.plugins.multiplication.multiplication_plugin import MultiplyCommand
+from calculator.plugins.division.division_plugin import DivideCommand
 
 fake = Faker()
 
@@ -17,10 +20,10 @@ def generate_test_data(num_records):
     """
     # Define operation mappings for both Calculator and Calculation tests
     operation_mappings = {
-        'add': add,
-        'subtract': subtract,
-        'multiply': multiply,
-        'divide': divide
+        'add': AddCommand,
+        'subtract': SubtractCommand,
+        'multiply': MultiplyCommand,
+        'divide': DivideCommand
     }
     # Generate test data
     for _ in range(num_records):
@@ -30,10 +33,10 @@ def generate_test_data(num_records):
         operation_name = fake.random_element(elements=list(operation_mappings.keys()))
         operation_func = operation_mappings[operation_name]
         # Ensure b is not zero for divide operation to prevent division by zero in expected calculation  # pylint: disable=line-too-long
-        if operation_func == divide: # pylint: disable=comparison-with-callable
+        if operation_func == DivideCommand: # pylint: disable=comparison-with-callable
             b = Decimal('1') if b == Decimal('0') else b
         try:
-            if operation_func == divide and b == Decimal('0'):# pylint: disable=comparison-with-callable
+            if operation_func == DivideCommand and b == Decimal('0'):# pylint: disable=comparison-with-callable
                 expected = "ZeroDivisionError"
             else:
                 expected = operation_func(a, b)

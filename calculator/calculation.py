@@ -1,8 +1,10 @@
 """Module to handle Calculation operations."""
 
 from decimal import Decimal
-from calculator.operations import add, subtract, multiply, divide
-
+from calculator.plugins.addition.add_plugin import AddCommand
+from calculator.plugins.subtraction.subtraction_plugin import SubtractCommand
+from calculator.plugins.multiplication.multiplication_plugin import MultiplyCommand
+from calculator.plugins.division.division_plugin import DivideCommand
 class Calculation:
     """Handles a single calculation."""
 
