@@ -1,5 +1,5 @@
-'''divide command '''
-from calculator.commands import Command
+'''divide command Imports Command from calculator.commands.command'''
+from calculator.commands.command import Command
 
 class DivideCommand(Command):
     def __init__(self, a, b):

@@ -1,30 +1,25 @@
-'''taking what I have in main.py from before and adding it here with changes'''
-import sys
+from calculator.plugins.addition.add_plugin import AddCommand
+from calculator.plugins.subtraction.subtraction_plugin import SubtractCommand
+from calculator.plugins.multiplication.multiplication_plugin import MultiplyCommand
+from calculator.plugins.division.division_plugin import DivideCommand
 from decimal import Decimal, InvalidOperation
-from calculator.plugins.addition import add
-from calculator.plugins.subtraction import subtract
-from calculator.plugins.multiplication import multiply
-from calculator.plugins.division import divide
-
-# Initialize an empty history list
-history = []
 
 def calculate_and_print(a, b, operation_name):
     operation_mappings = {
-        'add': add,
-        'subtract': subtract,
-        'multiply': multiply,
-        'divide': divide,
+        'add': AddCommand,
+        'subtract': SubtractCommand,
+        'multiply': MultiplyCommand,
+        'divide': DivideCommand,
     }
 
-    # Unified error handling for decimal conversion
     try:
         a_decimal, b_decimal = map(Decimal, [a, b])
-        result_function = operation_mappings.get(operation_name)
-        if result_function:
-            calculation_result = result_function(a_decimal, b_decimal)
-            history.append(f"{a} {operation_name} {b} = {calculation_result}")
-            print(f"The result of {a} {operation_name} {b} is equal to {calculation_result}")
+        command_class = operation_mappings.get(operation_name)
+        
+        if command_class:
+            command = command_class(a_decimal, b_decimal)
+            result = command.execute()
+            print(f"The result of {a} {operation_name} {b} is {result}")
         else:
             print(f"Unknown operation: {operation_name}")
     except InvalidOperation:
@@ -34,33 +29,20 @@ def calculate_and_print(a, b, operation_name):
     except Exception as e:
         print(f"An error occurred: {e}")
 
-def show_history():
-    """Display the history of calculations."""
-    if not history:
-        print("No history available.")
-        return
-    print("Calculation History:")
-    for entry in history:
-        print(entry)
-
 def main():
-    print("Welcome to the Calculator!")
+    print("Welcome to the Command-based Calculator!")
+    
     while True:
-        command = input("Enter 'c' to perform a calculation, 'h' to view history, or 'q' to quit: ").strip().lower()
+        command = input("Enter 'c' to perform a calculation, or 'q' to quit: ").strip().lower()
         
         if command == 'c':
             operation = input("Enter the operation (add, subtract, multiply, divide): ").strip().lower()
             a = input("Enter the first number: ")
             b = input("Enter the second number: ")
             calculate_and_print(a, b, operation)
-        
-        elif command == 'h':
-            show_history()
-
         elif command == 'q':
             print("Exiting the calculator.")
             break
-        
         else:
             print("Invalid command. Please try again.")
 

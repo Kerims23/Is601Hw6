@@ -1,5 +1,5 @@
-'''add command '''
-from calculator.commands import Command
+'''add command Imports Command from calculator.commands.command '''
+from calculator.commands.command import Command
 
 class AddCommand(Command):
     def __init__(self, a, b):

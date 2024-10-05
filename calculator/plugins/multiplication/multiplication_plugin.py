@@ -1,5 +1,5 @@
-'''multiply command '''
-from calculator.commands import Command
+'''multiply command Imports Command from calculator.commands.command'''
+from calculator.commands.command import Command
 
 class MultiplyCommand(Command):
     def __init__(self, a, b):
