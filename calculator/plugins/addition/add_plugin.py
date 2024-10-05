@@ -1,3 +1,4 @@
+'''add command '''
 from calculator.commands import Command
 
 class AddCommand(Command):
@@ -6,8 +7,6 @@ class AddCommand(Command):
         self.b = b
 
     def execute(self):
-        if self.b == 0:
-            return "Cannot divide by zero!"
         return self.a + self.b
 
 def register():
