@@ -13,33 +13,31 @@ as well as the functionality of the Calculation class that encapsulates these op
 # Import the Calculation class from the calculator package to test its functionality.
 # Import the arithmetic operation functions (add, subtract, multiply, divide) to be tested.
 # pylint: disable=unnecessary-dunder-call, invalid-name
-from decimal import Decimal
 import pytest
+from faker import Faker
+from decimal import Decimal
 from calculator.calculation import Calculation
 from calculator.plugins.addition.add_plugin import AddCommand
-#from calculator.plugins.subtraction.subtraction_plugin import SubtractCommand
-#from calculator.plugins.multiplication.multiplication_plugin import MultiplyCommand
+from calculator.plugins.subtraction.subtraction_plugin import SubtractCommand
+from calculator.plugins.multiplication.multiplication_plugin import MultiplyCommand
 from calculator.plugins.division.division_plugin import DivideCommand
 
-# pytest.mark.parametrize decorator is used to parameterize a test function, enabling it to be called
-# with different sets of arguments. Here, it's used to test various scenarios of arithmetic operations
-# with both integer and decimal operands to ensure the operations work correctly under different conditions.
+fake = Faker()
+
+@pytest.fixture(params=[1, 10, 100])  # You can customize this list
+def records(request):
+    return request.param
 
 def test_calculation_operations(a, b, operation, expected):
-    """
-    Test calculation operations with various scenarios.
-    This test ensures that the Calculation class correctly performs the arithmetic operation
-    (specified by the 'operation' parameter) on two Decimal operands ('a' and 'b'),
-    and that the result matches the expected outcome.
-    Parameters:
-        a (Decimal): The first operand in the calculation.
-        b (Decimal): The second operand in the calculation.
-        operation (function): The arithmetic operation to perform.
-        expected (Decimal): The expected result of the operation.
-    """
-    calc = Calculation(a, b, operation)  # Adapt this to use the command structure
+    """Test calculation operations."""
+    calc = Calculation(a, b, operation)  
     result = calc.perform()
-    assert result == expected
+    
+    if expected == "ZeroDivisionError":
+        with pytest.raises(ZeroDivisionError):
+            result
+    else:
+        assert result == expected
 
 def test_calculation_repr():
     """
