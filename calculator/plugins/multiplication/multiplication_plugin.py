@@ -9,5 +9,5 @@ class MultiplyCommand(Command):
     def execute(self):
         return self.a * self.b
 
-def register():
-    return MultiplyCommand
+# def register():
+#     return MultiplyCommand

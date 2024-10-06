@@ -9,5 +9,5 @@ class AddCommand(Command):
     def execute(self):
         return self.a + self.b
 
-def register():
-    return AddCommand
+# def register():
+#     return AddCommand

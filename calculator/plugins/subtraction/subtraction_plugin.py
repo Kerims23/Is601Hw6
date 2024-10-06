@@ -9,5 +9,5 @@ class SubtractCommand(Command):
     def execute(self):
         return self.a - self.b
 
-def register():
-    return SubtractCommand
+# def register():
+#     return SubtractCommand

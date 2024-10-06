@@ -11,5 +11,5 @@ class DivideCommand(Command):
             raise ZeroDivisionError("An error occurred: Cannot divide by zero")
         return self.a / self.b
 
-def register():
-    return DivideCommand
+# def register():
+#     return DivideCommand

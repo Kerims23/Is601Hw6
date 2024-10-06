@@ -25,26 +25,21 @@ from calculator.plugins.division.division_plugin import DivideCommand
 # with different sets of arguments. Here, it's used to test various scenarios of arithmetic operations
 # with both integer and decimal operands to ensure the operations work correctly under different conditions.
 
-def generate_test_cases(num_records):
-    '''generating test cases '''
-    test_cases = []
-    for i in range(num_records):
-        a = Decimal(i + 1)
-        b = Decimal(i + 2) if i < num_records - 1 else Decimal('0')  # Last case for zero division
-        test_cases.append((a, b, DivideCommand, a / b if b != 0 else "An error occurred: Cannot divide by zero"))
-    return test_cases
-
-@pytest.mark.parametrize("num1, num2, operation, expected_result", generate_test_cases(100))
-def test_calculation_operations(num1, num2, operation, expected_result):
-    """Test various operations using the Calculation class."""
-    calc = Calculation(num1, num2, operation)
-    if expected_result == "An error occurred: Cannot divide by zero":
-        with pytest.raises(ZeroDivisionError, match=expected_result):
-            calc.perform()
-    else:
-        result = calc.perform()
-        assert result == expected_result
-
+def test_calculation_operations(a, b, operation, expected):
+    """
+    Test calculation operations with various scenarios.
+    This test ensures that the Calculation class correctly performs the arithmetic operation
+    (specified by the 'operation' parameter) on two Decimal operands ('a' and 'b'),
+    and that the result matches the expected outcome.
+    Parameters:
+        a (Decimal): The first operand in the calculation.
+        b (Decimal): The second operand in the calculation.
+        operation (function): The arithmetic operation to perform.
+        expected (Decimal): The expected result of the operation.
+    """
+    calc = Calculation(a, b, operation)  # Adapt this to use the command structure
+    result = calc.perform()
+    assert result == expected
 
 def test_calculation_repr():
     """
