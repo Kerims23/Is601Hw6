@@ -1,8 +1,10 @@
 """Module to handle Calculation operations."""
 
 from decimal import Decimal
-from calculator.operations import add, subtract, multiply, divide
-
+from calculator.plugins.addition.add_plugin import AddCommand
+from calculator.plugins.subtraction.subtraction_plugin import SubtractCommand
+from calculator.plugins.multiplication.multiplication_plugin import MultiplyCommand
+from calculator.plugins.division.division_plugin import DivideCommand
 class Calculation:
     """Handles a single calculation."""
 
@@ -17,7 +19,8 @@ class Calculation:
     
     def perform(self) -> Decimal:
         """Performs the operation."""
-        return self.operation(self.a, self.b)
+        command = self.operation(self.a, self.b)  # Create the command instance
+        return command.execute() 
 
     @staticmethod
     def create(a: Decimal, b: Decimal, operation):

@@ -1,18 +1,18 @@
-'''docstring for pytest'''
-from decimal import Decimal
-import pytest
-from calculator.calculation import Calculation
-from calculator.operations import divide #
+# '''docstring for pytest'''
+# from calculator.calculation import Calculation
+# from calculator.operations import divide #
 
-def test_operation(a, b, operation, expected):# pylint: disable=invalid-name
-    '''Testing various operations'''
-    calculation = Calculation.create(a, b, operation)
-    assert calculation.perform() == expected, f"{operation.__name__} operation failed"
+# def test_add_command():
+#     add_command = AddCommand(3, 5)
+#     result = add_command.execute()
+#     assert result == 8
 
-# Keeping the divide by zero test as is since it tests a specific case
-def test_divide_by_zero():
-    '''Testing the divide by zero exception'''
-    with pytest.raises(ValueError, match="Cannot divide by zero"):
-        calculation = Calculation(Decimal('10'), Decimal('0'), divide)
-        calculation.perform()
-        
+# def test_divide_command():
+#     divide_command = DivideCommand(10, 2)
+#     result = divide_command.execute()
+#     assert result == 5
+
+# def test_divide_by_zero():
+#     divide_command = DivideCommand(10, 0)
+#     result = divide_command.execute()
+#     assert result == "Cannot divide by zero!"

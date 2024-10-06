@@ -1,21 +1,22 @@
-"""Operations for the calculator."""
+"""Operations for the calculator.
+I dont think this file is no longer needed."""
 
-from decimal import Decimal
+# from decimal import Decimal
 
-def add(a: Decimal, b: Decimal) -> Decimal:
-    """Return the sum of two numbers."""
-    return a + b
+# def add(a: Decimal, b: Decimal) -> Decimal:
+#     """Return the sum of two numbers."""
+#     return a + b
 
-def subtract(a: Decimal, b: Decimal) -> Decimal:
-    """Return the difference between two numbers."""
-    return a - b
+# def subtract(a: Decimal, b: Decimal) -> Decimal:
+#     """Return the difference between two numbers."""
+#     return a - b
 
-def multiply(a: Decimal, b: Decimal) -> Decimal:
-    """Return the product of two numbers."""
-    return a * b
+# def multiply(a: Decimal, b: Decimal) -> Decimal:
+#     """Return the product of two numbers."""
+#     return a * b
 
-def divide(a: Decimal, b: Decimal) -> Decimal:
-    """Return the division of two numbers. Raises ValueError on division by zero."""
-    if b == 0:
-        raise ValueError("Cannot divide by zero")
-    return a / b
+# def divide(a: Decimal, b: Decimal) -> Decimal:
+#     """Return the division of two numbers. Raises ValueError on division by zero."""
+#     if b == 0:
+#         raise ValueError("Cannot divide by zero")
+#     return a / b
