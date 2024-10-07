@@ -13,29 +13,29 @@ as well as the functionality of the Calculation class that encapsulates these op
 # Import the Calculation class from the calculator package to test its functionality.
 # Import the arithmetic operation functions (add, subtract, multiply, divide) to be tested.
 # pylint: disable=unnecessary-dunder-call, invalid-name
+from decimal import Decimal
 import pytest
 from faker import Faker
-from decimal import Decimal
 from calculator.calculation import Calculation
 from calculator.plugins.addition.add_plugin import AddCommand
-from calculator.plugins.subtraction.subtraction_plugin import SubtractCommand
-from calculator.plugins.multiplication.multiplication_plugin import MultiplyCommand
+#from calculator.plugins.subtraction.subtraction_plugin import SubtractCommand
+#from calculator.plugins.multiplication.multiplication_plugin import MultiplyCommand
 from calculator.plugins.division.division_plugin import DivideCommand
 
 fake = Faker()
 
 @pytest.fixture(params=[1, 10, 100])  # You can customize this list
 def records(request):
+    '''docstring to help with the num_records'''
     return request.param
 
 def test_calculation_operations(a, b, operation, expected):
     """Test calculation operations."""
-    calc = Calculation(a, b, operation)  
+    calc = Calculation(a, b, operation)
     result = calc.perform()
-    
     if expected == "ZeroDivisionError":
         with pytest.raises(ZeroDivisionError):
-            result
+            print(result)
     else:
         assert result == expected
 
