@@ -8,12 +8,23 @@ import logging
 import os
 
 class App:
-    def __init__(self) -> None:
-        os.makedirs('logs', exist_ok=True)  # Create logs directory if it doesn't exist
-        self.configure_logging()  # Configure logging
-        load_dotenv()  # Load environment variables
-        self.settings = self.load_environment_variables()  # Load any settings
-        self.history = []  # Initialize history list
+    def __init__(self):
+        os.makedirs('logs', exist_ok=True)
+        self.configure_logging()
+        load_dotenv()
+        self.settings = self.load_environment_variables()
+        self.settings.setdefault('ENVIRONMENT', 'PRODUCTION')  # Default to 'PRODUCTION' if not set
+
+        # Initialize history list
+        self.history = []
+
+    def load_environment_variables(self):
+        return {
+            'ENVIRONMENT': os.getenv('ENVIRONMENT')
+        }
+
+    def get_environment_variable(self, var_name):
+        return self.settings.get(var_name)
 
     def configure_logging(self):
         logging.basicConfig(
@@ -22,13 +33,6 @@ class App:
             format='%(asctime)s - %(levelname)s - %(message)s'
         )
         logging.info("Logging is set up.")
-
-    def load_environment_variables(self):
-        # Load any specific environment variables you want to use
-        api_key = os.getenv('API_KEY', 'default_value')  # Example of loading an API key
-        return {
-            'API_KEY': api_key
-        }
 
     def calculate_and_print(self, a, b, operation_name):
         operation_mappings = {
