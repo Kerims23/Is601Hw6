@@ -144,3 +144,70 @@
 2024-10-16 19:20:00,138 - root - INFO - execute addition
 2024-10-16 19:20:00,139 - root - INFO - exec division
 2024-10-16 19:20:00,140 - root - ERROR - division by zero error 
+2024-10-16 19:49:13,461 - root - INFO - Logging is set up.
+2024-10-16 19:49:13,466 - root - INFO - Logging is set up.
+2024-10-16 19:49:13,466 - root - INFO - execute addition
+2024-10-16 19:49:13,466 - root - INFO - Calculated: 5 add 3 = 8
+2024-10-16 19:49:13,468 - root - INFO - Logging is set up.
+2024-10-16 19:49:13,468 - root - INFO - exec subtraction
+2024-10-16 19:49:13,468 - root - INFO - Calculated: 10 subtract 2 = 8
+2024-10-16 19:49:13,470 - root - INFO - Logging is set up.
+2024-10-16 19:49:13,471 - root - INFO - exec multiplication
+2024-10-16 19:49:13,471 - root - INFO - Calculated: 4 multiply 5 = 20
+2024-10-16 19:49:13,473 - root - INFO - Logging is set up.
+2024-10-16 19:49:13,473 - root - INFO - exec division
+2024-10-16 19:49:13,473 - root - INFO - Calculated: 20 divide 4 = 5
+2024-10-16 19:49:13,475 - root - INFO - Logging is set up.
+2024-10-16 19:49:13,475 - root - ERROR - division by zero error 
+2024-10-16 19:49:13,475 - root - ERROR - Division by zero attempted.
+2024-10-16 19:49:13,478 - root - INFO - Logging is set up.
+2024-10-16 19:49:13,478 - root - WARNING - Unknown operation attempted: unknown
+2024-10-16 19:49:13,481 - root - INFO - Logging is set up.
+2024-10-16 19:49:13,481 - root - ERROR - Invalid number input: a or 3 is not a valid number.
+2024-10-16 19:49:13,483 - root - INFO - Logging is set up.
+2024-10-16 19:49:13,484 - root - ERROR - Invalid number input: 5 or b is not a valid number.
+2024-10-16 19:49:13,486 - root - INFO - execute addition
+2024-10-16 19:49:13,491 - root - INFO - execute addition
+2024-10-16 19:49:13,493 - root - INFO - exec subtraction
+2024-10-16 19:49:13,495 - root - INFO - exec multiplication
+2024-10-16 19:49:13,497 - root - INFO - exec multiplication
+2024-10-16 19:49:13,500 - root - ERROR - division by zero error 
+2024-10-16 19:49:13,504 - root - INFO - execute addition
+2024-10-16 19:49:13,506 - root - INFO - exec division
+2024-10-16 19:49:13,507 - root - ERROR - division by zero error 
+2024-10-16 19:49:27,728 - root - INFO - Logging is set up.
+2024-10-16 19:49:27,730 - root - INFO - Logging is set up.
+2024-10-16 19:49:27,730 - root - INFO - execute addition
+2024-10-16 19:49:27,731 - root - INFO - Calculated: 5 add 3 = 8
+2024-10-16 19:49:27,732 - root - INFO - Logging is set up.
+2024-10-16 19:49:27,732 - root - INFO - exec subtraction
+2024-10-16 19:49:27,732 - root - INFO - Calculated: 10 subtract 2 = 8
+2024-10-16 19:49:27,733 - root - INFO - Logging is set up.
+2024-10-16 19:49:27,734 - root - INFO - exec multiplication
+2024-10-16 19:49:27,734 - root - INFO - Calculated: 4 multiply 5 = 20
+2024-10-16 19:49:27,735 - root - INFO - Logging is set up.
+2024-10-16 19:49:27,735 - root - INFO - exec division
+2024-10-16 19:49:27,735 - root - INFO - Calculated: 20 divide 4 = 5
+2024-10-16 19:49:27,737 - root - INFO - Logging is set up.
+2024-10-16 19:49:27,737 - root - ERROR - division by zero error 
+2024-10-16 19:49:27,737 - root - ERROR - Division by zero attempted.
+2024-10-16 19:49:27,738 - root - INFO - Logging is set up.
+2024-10-16 19:49:27,738 - root - WARNING - Unknown operation attempted: unknown
+2024-10-16 19:49:27,740 - root - INFO - Logging is set up.
+2024-10-16 19:49:27,740 - root - ERROR - Invalid number input: a or 3 is not a valid number.
+2024-10-16 19:49:27,741 - root - INFO - Logging is set up.
+2024-10-16 19:49:27,741 - root - ERROR - Invalid number input: 5 or b is not a valid number.
+2024-10-16 19:49:27,742 - root - INFO - exec division
+2024-10-16 19:49:27,744 - root - INFO - exec division
+2024-10-16 19:49:27,746 - root - INFO - exec division
+2024-10-16 19:49:27,747 - root - INFO - exec multiplication
+2024-10-16 19:49:27,748 - root - INFO - execute addition
+2024-10-16 19:49:27,749 - root - INFO - exec division
+2024-10-16 19:49:27,750 - root - INFO - exec subtraction
+2024-10-16 19:49:27,751 - root - INFO - exec multiplication
+2024-10-16 19:49:27,753 - root - INFO - execute addition
+2024-10-16 19:49:27,754 - root - INFO - exec subtraction
+2024-10-16 19:49:27,755 - root - ERROR - division by zero error 
+2024-10-16 19:49:27,756 - root - INFO - execute addition
+2024-10-16 19:49:27,757 - root - INFO - exec division
+2024-10-16 19:49:27,758 - root - ERROR - division by zero error 
