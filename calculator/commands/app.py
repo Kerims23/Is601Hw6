@@ -5,6 +5,7 @@ from calculator.plugins.division.division_plugin import DivideCommand
 from decimal import Decimal, InvalidOperation
 from dotenv import load_dotenv
 import logging
+import logging.config
 import os
 
 class App:
@@ -27,10 +28,14 @@ class App:
         return self.settings.get(var_name)
 
     def configure_logging(self):
-        logging.basicConfig(
-            filename='logs/calculator.log',  # Log to a file in the logs directory
-            level=logging.INFO,
-            format='%(asctime)s - %(levelname)s - %(message)s'
+        logging_conf_path = 'logging.conf'
+        if os.path.exists(logging_conf_path):
+            logging.config.fileConfig(logging_conf_path, disable_existing_loggers=False)
+        else:
+            logging.basicConfig(
+                filename='logs/calculator.log',  # Log to a file in the logs directory
+                level=logging.INFO,
+                format='%(asctime)s - %(levelname)s - %(message)s'
         )
         logging.info("Logging is set up.")
 
@@ -91,6 +96,7 @@ class App:
             
             elif command == 'h':
                 self.show_history()
+                logging.info("Calculator History entered.")
 
             elif command == 'q':
                 print("Exiting the calculator.")

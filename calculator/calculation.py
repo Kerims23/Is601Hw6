@@ -15,6 +15,7 @@ class Calculation:
         self.a = a
         self.b = b
         self.operation = operation
+        
 
     def __repr__(self):
         # Assuming operation is a function, we use its name for representation
