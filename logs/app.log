@@ -211,3 +211,126 @@
 2024-10-16 19:49:27,756 - root - INFO - execute addition
 2024-10-16 19:49:27,757 - root - INFO - exec division
 2024-10-16 19:49:27,758 - root - ERROR - division by zero error 
+2024-10-16 21:05:28,520 - root - INFO - Logging is set up.
+2024-10-16 21:05:28,522 - root - INFO - Logging is set up.
+2024-10-16 21:05:28,522 - root - INFO - execute addition
+2024-10-16 21:05:28,522 - root - INFO - Calculated: 5 add 3 = 8
+2024-10-16 21:05:28,524 - root - INFO - Logging is set up.
+2024-10-16 21:05:28,524 - root - INFO - exec subtraction
+2024-10-16 21:05:28,525 - root - INFO - Calculated: 10 subtract 2 = 8
+2024-10-16 21:05:28,526 - root - INFO - Logging is set up.
+2024-10-16 21:05:28,526 - root - INFO - exec multiplication
+2024-10-16 21:05:28,527 - root - INFO - Calculated: 4 multiply 5 = 20
+2024-10-16 21:05:28,528 - root - INFO - Logging is set up.
+2024-10-16 21:05:28,528 - root - INFO - exec division
+2024-10-16 21:05:28,529 - root - INFO - Calculated: 20 divide 4 = 5
+2024-10-16 21:05:28,530 - root - INFO - Logging is set up.
+2024-10-16 21:05:28,530 - root - ERROR - division by zero error 
+2024-10-16 21:05:28,530 - root - ERROR - Division by zero attempted.
+2024-10-16 21:05:28,532 - root - INFO - Logging is set up.
+2024-10-16 21:05:28,532 - root - WARNING - Unknown operation attempted: unknown
+2024-10-16 21:05:28,534 - root - INFO - Logging is set up.
+2024-10-16 21:05:28,534 - root - ERROR - Invalid number input: a or 3 is not a valid number.
+2024-10-16 21:05:28,536 - root - INFO - Logging is set up.
+2024-10-16 21:05:28,536 - root - ERROR - Invalid number input: 5 or b is not a valid number.
+2024-10-16 21:05:28,539 - root - INFO - exec division
+2024-10-16 21:05:28,545 - root - INFO - exec division
+2024-10-16 21:05:28,547 - root - INFO - exec multiplication
+2024-10-16 21:05:28,549 - root - INFO - execute addition
+2024-10-16 21:05:28,551 - root - INFO - execute addition
+2024-10-16 21:05:28,553 - root - ERROR - division by zero error 
+2024-10-16 21:05:28,555 - root - INFO - execute addition
+2024-10-16 21:05:28,558 - root - INFO - exec division
+2024-10-16 21:05:28,560 - root - ERROR - division by zero error 
+2024-10-16 21:05:36,610 - root - INFO - Logging is set up.
+2024-10-16 21:05:36,611 - root - INFO - Logging is set up.
+2024-10-16 21:05:36,612 - root - INFO - execute addition
+2024-10-16 21:05:36,612 - root - INFO - Calculated: 5 add 3 = 8
+2024-10-16 21:05:36,613 - root - INFO - Logging is set up.
+2024-10-16 21:05:36,613 - root - INFO - exec subtraction
+2024-10-16 21:05:36,613 - root - INFO - Calculated: 10 subtract 2 = 8
+2024-10-16 21:05:36,615 - root - INFO - Logging is set up.
+2024-10-16 21:05:36,615 - root - INFO - exec multiplication
+2024-10-16 21:05:36,615 - root - INFO - Calculated: 4 multiply 5 = 20
+2024-10-16 21:05:36,616 - root - INFO - Logging is set up.
+2024-10-16 21:05:36,616 - root - INFO - exec division
+2024-10-16 21:05:36,616 - root - INFO - Calculated: 20 divide 4 = 5
+2024-10-16 21:05:36,618 - root - INFO - Logging is set up.
+2024-10-16 21:05:36,618 - root - ERROR - division by zero error 
+2024-10-16 21:05:36,618 - root - ERROR - Division by zero attempted.
+2024-10-16 21:05:36,619 - root - INFO - Logging is set up.
+2024-10-16 21:05:36,619 - root - WARNING - Unknown operation attempted: unknown
+2024-10-16 21:05:36,621 - root - INFO - Logging is set up.
+2024-10-16 21:05:36,621 - root - ERROR - Invalid number input: a or 3 is not a valid number.
+2024-10-16 21:05:36,622 - root - INFO - Logging is set up.
+2024-10-16 21:05:36,622 - root - ERROR - Invalid number input: 5 or b is not a valid number.
+2024-10-16 21:05:36,623 - root - INFO - exec division
+2024-10-16 21:05:36,625 - root - INFO - exec multiplication
+2024-10-16 21:05:36,626 - root - INFO - exec multiplication
+2024-10-16 21:05:36,628 - root - INFO - execute addition
+2024-10-16 21:05:36,629 - root - INFO - exec subtraction
+2024-10-16 21:05:36,630 - root - INFO - exec multiplication
+2024-10-16 21:05:36,631 - root - INFO - exec subtraction
+2024-10-16 21:05:36,633 - root - INFO - execute addition
+2024-10-16 21:05:36,634 - root - INFO - exec division
+2024-10-16 21:05:36,635 - root - INFO - exec subtraction
+2024-10-16 21:05:36,636 - root - ERROR - division by zero error 
+2024-10-16 21:05:36,638 - root - INFO - execute addition
+2024-10-16 21:05:36,639 - root - INFO - exec division
+2024-10-16 21:05:36,640 - root - ERROR - division by zero error 
+2024-10-16 21:11:03,644 - root - INFO - Logging is set up.
+2024-10-16 21:11:03,647 - root - INFO - Logging is set up.
+2024-10-16 21:11:03,647 - root - INFO - execute addition
+2024-10-16 21:11:03,647 - root - INFO - Calculated: 5 add 3 = 8
+2024-10-16 21:11:03,650 - root - INFO - Logging is set up.
+2024-10-16 21:11:03,650 - root - INFO - exec subtraction
+2024-10-16 21:11:03,650 - root - INFO - Calculated: 10 subtract 2 = 8
+2024-10-16 21:11:03,652 - root - INFO - Logging is set up.
+2024-10-16 21:11:03,652 - root - INFO - exec multiplication
+2024-10-16 21:11:03,652 - root - INFO - Calculated: 4 multiply 5 = 20
+2024-10-16 21:11:03,654 - root - INFO - Logging is set up.
+2024-10-16 21:11:03,654 - root - INFO - exec division
+2024-10-16 21:11:03,654 - root - INFO - Calculated: 20 divide 4 = 5
+2024-10-16 21:11:03,656 - root - INFO - Logging is set up.
+2024-10-16 21:11:03,656 - root - ERROR - division by zero error 
+2024-10-16 21:11:03,657 - root - ERROR - Division by zero attempted.
+2024-10-16 21:11:03,658 - root - INFO - Logging is set up.
+2024-10-16 21:11:03,659 - root - WARNING - Unknown operation attempted: unknown
+2024-10-16 21:11:03,661 - root - INFO - Logging is set up.
+2024-10-16 21:11:03,661 - root - ERROR - Invalid number input: a or 3 is not a valid number.
+2024-10-16 21:11:03,663 - root - INFO - Logging is set up.
+2024-10-16 21:11:03,663 - root - ERROR - Invalid number input: 5 or b is not a valid number.
+2024-10-16 21:11:03,693 - root - INFO - execute addition
+2024-10-16 21:11:03,695 - root - INFO - exec division
+2024-10-16 21:11:03,697 - root - ERROR - division by zero error 
+2024-10-16 21:11:14,052 - root - INFO - Logging is set up.
+2024-10-16 21:11:14,055 - root - INFO - Logging is set up.
+2024-10-16 21:11:14,055 - root - INFO - execute addition
+2024-10-16 21:11:14,055 - root - INFO - Calculated: 5 add 3 = 8
+2024-10-16 21:11:14,057 - root - INFO - Logging is set up.
+2024-10-16 21:11:14,057 - root - INFO - exec subtraction
+2024-10-16 21:11:14,057 - root - INFO - Calculated: 10 subtract 2 = 8
+2024-10-16 21:11:14,060 - root - INFO - Logging is set up.
+2024-10-16 21:11:14,060 - root - INFO - exec multiplication
+2024-10-16 21:11:14,060 - root - INFO - Calculated: 4 multiply 5 = 20
+2024-10-16 21:11:14,063 - root - INFO - Logging is set up.
+2024-10-16 21:11:14,063 - root - INFO - exec division
+2024-10-16 21:11:14,063 - root - INFO - Calculated: 20 divide 4 = 5
+2024-10-16 21:11:14,065 - root - INFO - Logging is set up.
+2024-10-16 21:11:14,065 - root - ERROR - division by zero error 
+2024-10-16 21:11:14,065 - root - ERROR - Division by zero attempted.
+2024-10-16 21:11:14,067 - root - INFO - Logging is set up.
+2024-10-16 21:11:14,067 - root - WARNING - Unknown operation attempted: unknown
+2024-10-16 21:11:14,069 - root - INFO - Logging is set up.
+2024-10-16 21:11:14,069 - root - ERROR - Invalid number input: a or 3 is not a valid number.
+2024-10-16 21:11:14,071 - root - INFO - Logging is set up.
+2024-10-16 21:11:14,071 - root - ERROR - Invalid number input: 5 or b is not a valid number.
+2024-10-16 21:11:14,073 - root - INFO - execute addition
+2024-10-16 21:11:14,076 - root - INFO - exec division
+2024-10-16 21:11:14,078 - root - INFO - execute addition
+2024-10-16 21:11:14,080 - root - INFO - exec multiplication
+2024-10-16 21:11:14,081 - root - INFO - exec division
+2024-10-16 21:11:14,084 - root - ERROR - division by zero error 
+2024-10-16 21:11:14,087 - root - INFO - execute addition
+2024-10-16 21:11:14,088 - root - INFO - exec division
+2024-10-16 21:11:14,089 - root - ERROR - division by zero error 

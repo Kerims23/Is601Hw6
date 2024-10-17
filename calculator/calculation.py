@@ -26,7 +26,7 @@ class Calculation:
         command = self.operation(self.a, self.b)  # Create the command instance
         return command.execute() 
 
-    @staticmethod
+    @classmethod
     def create(a: Decimal, b: Decimal, operation):
         """Factory method to create a new Calculation."""
         return Calculation(a, b, operation)
