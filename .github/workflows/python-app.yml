@@ -18,9 +18,7 @@ jobs:
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Set environment variables
-      run: |
-        echo "API_KEY=your_api_key" >> $GITHUB_ENV
-        echo "OTHER_VARIABLE=value" >> $GITHUB_ENV
+      run: echo "ENVIRONMENT=DEVELOPMENT" >> $GITHUB_ENV
     - name: Test with pytest
       run: |
         pytest

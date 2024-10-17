@@ -10,11 +10,19 @@ import os
 
 class App:
     def __init__(self):
-        os.makedirs('logs', exist_ok=True)
-        self.configure_logging()
-        load_dotenv()
-        self.settings = self.load_environment_variables()
-        self.settings.setdefault('ENVIRONMENT', 'PRODUCTION')  # Default to 'PRODUCTION' if not set
+        os.makedirs('logs', exist_ok=True)  # Create a logs directory if it doesn't exist
+        self.configure_logging()  # Call to configure logging
+        self.load_environment_variables()  # Load the environment variables
+        
+        # Load the environment variable or use the default 'PRODUCTION'
+        environment = os.getenv("ENVIRONMENT")
+        if not environment:  # Check if ENVIRONMENT is not set
+            load_dotenv()  # Load from .env if not set
+            environment = os.getenv("ENVIRONMENT", 'PRODUCTION')  # Default to 'PRODUCTION'
+
+        self.settings = {
+            'ENVIRONMENT': environment  # Store the environment variable in settings
+        }
 
         # Initialize history list
         self.history = []
