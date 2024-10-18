@@ -27,6 +27,6 @@ class Calculation:
         return command.execute() 
 
     @classmethod
-    def create(a: Decimal, b: Decimal, operation):
+    def create(cls, a: Decimal, b: Decimal, operation):
         """Factory method to create a new Calculation."""
-        return Calculation(a, b, operation)
+        return cls(a, b, operation)
